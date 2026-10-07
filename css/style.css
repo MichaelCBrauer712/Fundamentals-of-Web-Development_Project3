@@ -147,16 +147,16 @@ nav a:hover {
   list-style: square;
 }
 
-/* Volleyball page: fluid layout */
+/* Volleyball page: fluid layout, mobile first */
 
 .volleyball main {
-  width: 90%;
+  width: 94%;
   max-width: 75rem;
-  margin: 2rem auto;
+  margin: 1rem auto;
 }
 
 .volleyball header {
-  padding: 3rem 1.5rem;
+  padding: 1.5rem 1rem;
   border-radius: 0.5rem;
   background-color: #1f2a44;
   text-align: center;
@@ -164,18 +164,18 @@ nav a:hover {
 
 .volleyball header h1 {
   color: #ffffff;
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 .volleyball header p {
   margin-bottom: 0;
   color: #e6d29a;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-style: italic;
 }
 
 .volleyball section {
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
 }
 
 .volleyball h2 {
@@ -186,15 +186,16 @@ nav a:hover {
 
 .facts {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
 .facts li {
-  padding: 0.75rem 1.25rem;
+  padding: 0.75rem 1rem;
   border-radius: 2rem;
   background-color: #f1e6c4;
   font-weight: 700;
+  text-align: center;
 }
 
 .highlights {
@@ -204,8 +205,8 @@ nav a:hover {
 
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  gap: 1rem;
 }
 
 .gallery h2 {
@@ -223,7 +224,7 @@ nav a:hover {
 
 .gallery img {
   width: 100%;
-  height: 25rem;
+  height: 16rem;
   border-radius: 0.25rem;
   object-fit: cover;
   object-position: center 30%;
@@ -242,6 +243,83 @@ nav a:hover {
   margin: 0 auto;
   border-radius: 0.5rem;
   box-shadow: 0 0.25rem 1rem rgba(31, 42, 68, 0.25);
+}
+
+/* Volleyball page: tablet and up */
+
+@media (min-width: 40rem) {
+  .volleyball main {
+    width: 90%;
+    margin: 2rem auto;
+  }
+
+  .volleyball header {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .volleyball header h1 {
+    font-size: 2.5rem;
+  }
+
+  .volleyball header p {
+    font-size: 1.125rem;
+  }
+
+  .volleyball section {
+    margin-top: 2rem;
+  }
+
+  .facts {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .facts li {
+    padding: 0.75rem 1.25rem;
+    text-align: left;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .gallery img {
+    height: 20rem;
+  }
+}
+
+/* Volleyball page: desktop and up */
+
+@media (min-width: 64rem) {
+  .volleyball header {
+    padding: 3rem 1.5rem;
+  }
+
+  .volleyball header h1 {
+    font-size: 3rem;
+  }
+
+  .volleyball header p {
+    font-size: 1.25rem;
+  }
+
+  .volleyball section {
+    margin-top: 2.5rem;
+  }
+
+  .volleyball h2 {
+    font-size: 2rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .gallery img {
+    height: 25rem;
+  }
 }
 
 /* Soccer page: fluid layout */
