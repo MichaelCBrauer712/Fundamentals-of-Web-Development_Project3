@@ -3,6 +3,8 @@
 // Restricted Google Maps key: works only on this site and only for the Maps JavaScript API.
 var MAPS_KEY = "AIzaSyC4EAdRRC-fydah1HykZHSkTfKDZcTjopk";
 
+var MAX_PINS = 10;
+
 var map;
 var pins = [];
 
@@ -75,6 +77,11 @@ function initMap() {
 
   // Feature 3: click the map to drop pins, with a counter and a clear button.
   map.addListener("click", function (event) {
+    if (pins.length >= MAX_PINS) {
+      document.getElementById("pin-count").textContent = "Pin limit of " + MAX_PINS + " reached. Clear the pins to start over.";
+      return;
+    }
+
     var pin = new google.maps.Marker({
       position: event.latLng,
       map: map
