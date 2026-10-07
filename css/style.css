@@ -446,6 +446,80 @@ nav a:hover {
   text-align: center;
 }
 
+/* Map page: fluid layout */
+
+.map main {
+  width: 94%;
+  max-width: 60rem;
+  margin: 1rem auto;
+}
+
+.map header {
+  padding: 1.5rem 1rem;
+  border-bottom: 0.25rem double #c9a24d;
+  text-align: center;
+}
+
+.map header h1 {
+  font-size: 2rem;
+}
+
+.map header p {
+  margin-bottom: 0;
+  color: #8a6a1f;
+  font-style: italic;
+}
+
+.map h2 {
+  margin-top: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #d9d4c7;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.controls button {
+  padding: 0.5rem 1rem;
+  border: 0.125rem solid #1f2a44;
+  border-radius: 2rem;
+  background-color: #ffffff;
+  color: #1f2a44;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  background-color: #1f2a44;
+  color: #ffffff;
+}
+
+#pin-count {
+  font-weight: 700;
+}
+
+#map {
+  width: 100%;
+  height: 22rem;
+  border: 0.25rem solid #c9a24d;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 1rem rgba(31, 42, 68, 0.25);
+}
+
+@media (min-width: 40rem) {
+  .map main {
+    margin: 2rem auto;
+  }
+
+  #map {
+    height: 32rem;
+  }
+}
+
 /* Footer and finishing touches shared by every page */
 
 html {

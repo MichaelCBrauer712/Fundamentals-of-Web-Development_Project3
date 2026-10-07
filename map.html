@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="An interactive Google Map of Naples, Florida, with map views and pins you can drop.">
+    <title>Naples Map</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;display=swap">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+  </head>
+  <body class="map">
+    <nav id="top">
+      <ul>
+        <li><a href="index.html">index.html</a></li>
+        <li><a href="volleyball.html">volleyball.html</a></li>
+        <li><a href="soccer.html">soccer.html</a></li>
+        <li><a href="map.html">map.html</a></li>
+      </ul>
+    </nav>
+    <main>
+      <header>
+        <h1>Explore the Map</h1>
+        <p>Naples, Florida, home base for the sports pages.</p>
+      </header>
+
+      <section class="explorer">
+        <h2>Naples, Florida</h2>
+        <p>Switch between the map and satellite views, click anywhere on the map to drop a pin, and click the marker to learn more.</p>
+        <div class="controls">
+          <button type="button" id="view-map">Map view</button>
+          <button type="button" id="view-satellite">Satellite view</button>
+          <button type="button" id="clear-pins">Clear pins</button>
+        </div>
+        <p id="pin-count">Pins dropped: 0</p>
+        <div id="map"></div>
+      </section>
+    </main>
+    <footer>
+      <p>Built by Michael C. Brauer for Fundamentals of Web Development, Project 3.</p>
+      <p id="today"></p>
+      <p><a href="index.html">Back to resume</a></p>
+      <p><a href="#top">Back to top</a></p>
+    </footer>
+  </body>
+</html>
